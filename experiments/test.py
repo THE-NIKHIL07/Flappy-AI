@@ -1,5 +1,5 @@
 import torch
-from experiments.agent import DuelingDQN
+from agent import DuelingDQN
 import os
 
 n_actions = 2
@@ -8,7 +8,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = DuelingDQN(n_actions).to(device)
 
-checkpoint = torch.load("models\checkpoint_ep200.pth", map_location=device)
+checkpoint = torch.load("best_model_new.pth", map_location=device)
 model.load_state_dict(checkpoint)
 
 model.eval()

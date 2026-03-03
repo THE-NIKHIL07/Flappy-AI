@@ -1,9 +1,9 @@
 import torch
-from experiments.env import FlappyBirdEnv
-from experiments.agent import Agent
+from env import FlappyBirdEnv
+from agent import Agent
 import pygame
 
-def play(best_model_path="best_model_new.pth", episodes=10):
+def play(best_model_path="checkpoint_ep300.pth", episodes=10):
     
     env = FlappyBirdEnv(render_mode="human", frame_skip=1)
 
