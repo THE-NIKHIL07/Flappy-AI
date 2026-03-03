@@ -68,7 +68,7 @@ class Agent:
         rewards_t = torch.tensor(rewards, dtype=torch.float32, device=self.device)
         dones_t = torch.tensor(dones, dtype=torch.float32, device=self.device)
 
-        # Double DQN
+        
         with torch.no_grad():
             next_actions = self.net(next_states_t).argmax(1, keepdim=True)
             next_q = self.target_net(next_states_t).gather(1, next_actions).squeeze()
