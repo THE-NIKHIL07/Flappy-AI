@@ -1,6 +1,6 @@
 import torch
 from env import FlappyBirdEnv
-from agent import Agent
+from experiments.agent import Agent
 
 def train(resume_best_model=True):
     max_episodes = 10000

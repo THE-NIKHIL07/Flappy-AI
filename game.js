@@ -101,7 +101,7 @@ function resetGame(){
 
 async function loadModel(){
     try{
-        session = await ort.InferenceSession.create("/models/best_model.onnx");
+        session = await ort.InferenceSession.create("/models/new_model.onnx");
         modelLoaded = true;
     }catch(e){
         console.error(e);
