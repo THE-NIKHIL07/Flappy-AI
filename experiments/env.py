@@ -54,7 +54,7 @@ class FlappyBirdEnv(gym.Env):
         self.bird_y = 256
         self.bird_vel = 0
         self.pipe_x = 450
-        self.pipe_y = random.randint(200, 300)  # initial pipe in medium range
+        self.pipe_y = random.randint(200, 300)  
         self.last_pipe_y = self.pipe_y
         self.score = 0
         self.passed_pipe = False
@@ -86,14 +86,14 @@ class FlappyBirdEnv(gym.Env):
             if self.pipe_x < -52:
                 self.pipe_x = 400
 
-                # Random pipe height change with occasional big jump
+                
                 if random.random() < 0.3:
                     change = random.randint(-150, 150)
                 else:
                     change = random.randint(-80, 80)
 
                 new_pipe_y = self.last_pipe_y + change
-                self.pipe_y = max(80, min(420, new_pipe_y))  # clamp pipe height
+                self.pipe_y = max(80, min(420, new_pipe_y))  
                 self.last_pipe_y = self.pipe_y
                 self.passed_pipe = False
 
