@@ -92,3 +92,7 @@ input {
     font-weight: bold;
     color: #ff4444;
 }
+
+#lives-screen .card h2 {
+    color: black;
+}
