@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flappy AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+</head>
+<body>
+
+<div id="start-screen" class="screen center-bottom start-bg">
+    <button id="start-btn" class="yellow-btn">START</button>
+</div>
+
+<div id="lives-screen" class="screen menu-bg center hidden">
+    <div class="card">
+        <h2>Number of Lives</h2>
+        <input type="number" id="lives-input" min="1" value="3">
+        <br><br>
+        <button id="enter-lives" class="yellow-btn">ENTER</button>
+        <br><br>
+        <button id="mode-toggle" class="yellow-btn">Mode: AI</button>
+    </div>
+</div>
+
+<canvas id="gameCanvas" class="hidden"></canvas>
+
+<div id="end-screen" class="screen menu-bg center hidden">
+    <div class="card">
+        <h1 class="gameover">GAME OVER</h1>
+        <p id="best-score"></p>
+        <button id="restart-btn" class="yellow-btn">RESTART</button>
+        <br><br>
+        <button id="exit-btn" class="yellow-btn">EXIT</button>
+    </div>
+</div>
+
+<script src="game.js?v=8"></script>
+</body>
+</html>

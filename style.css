@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: black;
+}
+
+.screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.start-bg,
+.menu-bg {
+    background-image: url("assets/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.center-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 120px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    touch-action: manipulation;
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    width: 360px;
+    max-width: 90%;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.yellow-btn {
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: #FFD600;
+    color: black;
+    font-weight: bold;
+    transition: all 0.25s ease;
+    width: 200px;
+}
+
+.yellow-btn:hover {
+    background: #FFC400;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+    width: 120px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.gameover {
+    font-size: 42px;
+    font-weight: bold;
+    color: #ff4444;
+}
