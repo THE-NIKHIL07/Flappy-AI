@@ -193,34 +193,16 @@ function update(){
         passedPipe = false;
     }
 
-    if(isAI){
-
-        if(
-            birdY < 0 ||
-            birdY > 400 ||
-            (
-                50 + collisionW > pipeX &&
-                50 < pipeX + 52 &&
-                (birdY < pipeY || birdY + collisionH > pipeY + GAP)
-            )
-        ){
-            handleDeath();
-        }
-
-    }else{
-
-        if(
-            birdY < 0 ||
-            birdY + collisionH > height ||
-            (
-                50 + collisionW > pipeX &&
-                50 < pipeX + 52 &&
-                (birdY < pipeY || birdY + collisionH > pipeY + GAP)
-            )
-        ){
-            handleDeath();
-        }
-
+    if(
+        birdY < 0 ||
+        birdY + collisionH > height ||
+        (
+            50 + collisionW > pipeX &&
+            50 < pipeX + 52 &&
+            (birdY < pipeY || birdY + collisionH > pipeY + GAP)
+        )
+    ){
+        handleDeath();
     }
 }
 
